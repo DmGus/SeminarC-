@@ -4,7 +4,7 @@
 // 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
 // 2 -> " -2, -1, 0, 1, 2"
 
-Console.WriteLine("Введите целое и нажмите ENTER");
+Console.WriteLine("Введите целое число и нажмите ENTER");
 int num = Convert.ToInt32(Console.ReadLine());
 int index = -num;
 
