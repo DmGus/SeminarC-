@@ -11,11 +11,11 @@ int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе целое число");
 int b = Convert.ToInt32(Console.ReadLine());
 
-if (a == b*b) 
+if (a == b * b)
 {
-Console.WriteLine($"Число {a} является квадратом числа {b}");
+    Console.WriteLine($"Число {a} является квадратом числа {b}");
 }
 else
 {
-Console.WriteLine($"Число {a} НЕ является квадратом числа {b}");
+    Console.WriteLine($"Число {a} НЕ является квадратом числа {b}");
 }
