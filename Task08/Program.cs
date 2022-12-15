@@ -7,8 +7,13 @@ Console.WriteLine("Введите целое число и нажмите ENTER"
 int num = Convert.ToInt32(Console.ReadLine());
 int index = 2;
 
+
+Console.WriteLine("Все чётные числа от 1 до введеного числа:");
+if (num >= 2) Console.Write(index);
+index+=2;
+
 while (index <= num)
 {
-    Console.Write(index + " ");
+    Console.Write(", " + index);
     index+=2;
 }
