@@ -16,6 +16,6 @@ int ThirdDigit(int number)
 
 int MakeThreeDigits(int numb)
 {
-    while (numb>1000) numb=numb/10;
+    while (numb>999) numb=numb/10;
     return numb;
 }
