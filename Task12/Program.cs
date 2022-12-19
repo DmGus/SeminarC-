@@ -5,18 +5,15 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
+Console.WriteLine("Введите 2 числа");
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
 
-int number = new Random().Next(100, 1000);
-Console.WriteLine($"Случайное трехзначное число => {number}");
-
-int maxDigit = MaxDigit(number);
-Console.Write($"Наибольшая цифра числа = {maxDigit}");
-
-int MaxDigit(int num)
+if (number1 % number2 == 0) 
 {
-    int firstDigit = num / 10;
-    int secondDigit = num % 10;
-    int result = firstDigit > secondDigit ? firstDigit : secondDigit;
-    return result;
+    Console.WriteLine("Число 1 крастно числу 2");
 }
-
+else
+{
+    Console.WriteLine($"Число 1 не крастно числу 2, остаток {number1 % number2}");
+}
