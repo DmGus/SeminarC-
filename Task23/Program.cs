@@ -8,3 +8,23 @@
 // 4 | 64
 // 5 | 125
 
+Console.Write("Введите положительное, целое число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+while(number < 1)
+{
+    Console.Write("Введите положительное, целое число: ");
+    number = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine($"  {number} -> ");
+Numb(number);
+
+void Numb(int n1)
+{
+    int counter = 1;
+    while(counter <= n1)
+    {
+        Console.WriteLine($"{counter, 3} | {counter * counter * counter}");
+        counter++;
+    }
+}
