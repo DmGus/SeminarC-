@@ -1,6 +1,7 @@
 ﻿// Программа, которая принимает на ввод число,
 // и раскладывает его на простые множители;
 
+// Алгоритм с записью всех простых множителей составного числа в массив
 Console.Write("Введите целое число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -36,3 +37,17 @@ else
     Console.Write($"{digitarray[index]}");
 }
 
+
+// // Алгоритм без массива
+// Console.Write("Введите целое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write($"Число {num} = ");
+
+// while (num > 1)
+// {
+//     int count = 2;
+//     while (num % count != 0) count++;
+//     num = num / count;
+//     Console.Write($"{count}*");
+// }
+// Console.Write("\b \b");
