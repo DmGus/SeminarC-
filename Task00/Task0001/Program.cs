@@ -36,15 +36,3 @@ else
     Console.Write($"{digitarray[index]}");
 }
 
-
-// Количество цифр в числе
-// int CountDigits(int numd)
-// {
-//     int indexd=0;
-//     while(numd>0) 
-//     {
-//     numd = numd/10;
-//     indexd++;
-//     }
-// return indexd + 1;
-// }

@@ -23,8 +23,21 @@ bool Polindrom(int number)
 }
 
 
-// * С любым числом, через массив
 
+// Количество цифр в числе
+// int CountDigits(int numd)
+// {
+//     int indexd=0;
+//     while(numd>0) 
+//     {
+//     numd = numd/10;
+//     indexd++;
+//     }
+// return indexd;
+// }
+
+
+// * С любым числом, через массив
 // Console.Write("Введите целое число: ");
 // int num = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine(Polindrom(num)
