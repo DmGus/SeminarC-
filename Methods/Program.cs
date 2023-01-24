@@ -94,3 +94,30 @@ double MaxNumber(double[] array)
     }
     return max;
 }
+
+
+// TUPLE & OUT IN METHODS
+// Tuple
+Cross Lines Point
+(double x, double y) CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2)
+{
+    double resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
+    double resultY = Math.Round(lk1 * (lb2 - lb1) / (lk1 - lk2) + lb1,2);
+    return (resultX, resultY);
+}
+// IN BODY
+var pointcoordinate = CrossLinesCoordinate(k1, b1, k2, b2);
+Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
++ $" переcекаются в точке с координатами [{pointcoordinate.x}, {pointcoordinate.y}]");
+
+
+// Out
+void CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2, out double resultX, out double  resultY)
+{
+    resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
+    resultY = Math.Round(lk1 * (lb2 - lb1) / (lk1 - lk2) + lb1,2);    
+}
+// IN BODY
+CrossLinesCoordinate(k1, b1, k2, b2, out double pointcoordinatex, out double pointcoordinatey);
+Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
++ $" переcекаются в точке с координатами [{pointcoordinatex}, {pointcoordinatey}]");

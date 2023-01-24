@@ -17,9 +17,9 @@ double k2 = InsertDigit("Введите переменную k для второ
 double b2 = InsertDigit("Введите переменную b для второй прямой вида y = k*x + b: ");
 
 // Tuple
-// var pointcoordinate = CrossLinesCoordinate(k1, b1, k2, b2);
-// Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
-// + $" переcекаются в точке с координатами [{pointcoordinate.x}, {pointcoordinate.y}]");
+var pointcoordinate = CrossLinesCoordinate(k1, b1, k2, b2);
+Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
++ $" переcекаются в точке с координатами [{pointcoordinate.x}, {pointcoordinate.y}]");
 
 // Out
 CrossLinesCoordinate(k1, b1, k2, b2, out double pointcoordinatex, out double pointcoordinatey);
@@ -36,7 +36,7 @@ double InsertDigit(string text)
 }
 
 // Tuple
-//Cross Lines Point
+// Cross Lines Point
 // (double x, double y) CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2)
 // {
 //     double resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
