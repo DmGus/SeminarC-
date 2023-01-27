@@ -46,6 +46,32 @@ int[] GetUserNumbers()
     return result;
 }
 
+// CreatRandomArrayWithoutRepeat and print random int Array without repeat;
+int[] CreatRandomArrayWithoutRepeat(int size, int min, int max)
+{
+    if (max<size) max=min+size;
+    Random rnd = new Random();
+    int[] randomArray = new int[size];
+
+    for (int i = 0; i < randomArray.Length; i++)
+    {
+        bool repeat=true;
+        while (repeat)
+        {
+            repeat=false;
+            randomArray[i] = rnd.Next(min, max + 1);
+            for (int j = 0; j < i; j++)
+            {
+                if (randomArray[i] == randomArray[j] && i!=j) 
+                {
+                    randomArray[i] = rnd.Next(min, max + 1);
+                    repeat=true;
+                }
+            }
+        }
+    }
+    return randomArray;
+}
 
 // DOUBLE
 
@@ -98,26 +124,26 @@ double MaxNumber(double[] array)
 
 // TUPLE & OUT IN METHODS
 // Tuple
-Cross Lines Point
-(double x, double y) CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2)
-{
-    double resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
-    double resultY = Math.Round(lk1 * (lb2 - lb1) / (lk1 - lk2) + lb1,2);
-    return (resultX, resultY);
-}
+// Cross Lines Point
+// (double x, double y) CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2)
+// {
+//     double resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
+//     double resultY = Math.Round(lk1 * (lb2 - lb1) / (lk1 - lk2) + lb1,2);
+//     return (resultX, resultY);
+// }
 // IN BODY
-var pointcoordinate = CrossLinesCoordinate(k1, b1, k2, b2);
-Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
-+ $" переcекаются в точке с координатами [{pointcoordinate.x}, {pointcoordinate.y}]");
+// var pointcoordinate = CrossLinesCoordinate(k1, b1, k2, b2);
+// Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
+// + $" переcекаются в точке с координатами [{pointcoordinate.x}, {pointcoordinate.y}]");
 
 
 // Out
-void CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2, out double resultX, out double  resultY)
-{
-    resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
-    resultY = Math.Round(lk1 * (lb2 - lb1) / (lk1 - lk2) + lb1,2);    
-}
+// void CrossLinesCoordinate(double lk1, double lb1, double lk2, double lb2, out double resultX, out double  resultY)
+// {
+//     resultX = Math.Round((lb2 - lb1) / (lk1 - lk2),2);
+//     resultY = Math.Round(lk1 * (lb2 - lb1) / (lk1 - lk2) + lb1,2);    
+// }
 // IN BODY
-CrossLinesCoordinate(k1, b1, k2, b2, out double pointcoordinatex, out double pointcoordinatey);
-Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
-+ $" переcекаются в точке с координатами [{pointcoordinatex}, {pointcoordinatey}]");
+// CrossLinesCoordinate(k1, b1, k2, b2, out double pointcoordinatex, out double pointcoordinatey);
+// Console.WriteLine($"Прямая y = {k1}*x + {b1} и прямая y = {k2}*x + {b2}" 
+// + $" переcекаются в точке с координатами [{pointcoordinatex}, {pointcoordinatey}]");
