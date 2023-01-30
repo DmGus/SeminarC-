@@ -9,12 +9,11 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.Write($"N = {number} -> \"");
 NaturalNumber(number);
 Console.Write("\b \b ");
-Console.Write($"\"");
-
+Console.Write("\"");
 void NaturalNumber(int num)
 
 {
-    if (num ==0) return;
+    if (num <= 0) return;
     Console.Write($" {num},");
     NaturalNumber(num-1);    
 }
